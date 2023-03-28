@@ -1,5 +1,6 @@
 pipeline {
   agent any
+
   stages {
     stage('Checkout Code') {
       steps {
@@ -10,6 +11,12 @@ pipeline {
     stage('Log') {
       steps {
         sh 'ls -la'
+      }
+    }
+
+    stage('Check if failed') {
+      steps {
+        sh 'echo tests have failed && exit 1'
       }
     }
 
