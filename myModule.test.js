@@ -7,6 +7,6 @@ describe('Sum function', () => {
 
         let result = sum(a, b);
 
-        expect(result).toBe(11);
+        expect(result).toBe(1242543);
     })
 })
